@@ -1,0 +1,1 @@
+(function(){"use strict";const e={fb:(t,f=1,s=1)=>t<=2?s:e.fb(t-1,s,f+s),fb1:t=>t<=2?1:e.fb1(t-2)+e.fb1(t-1)};onmessage=function(t){const{data:f}=t,s=e[f.function](f.data);self.postMessage({data:s,name:"worker test"}),self.close()}})();
